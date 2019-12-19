@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu, Icon } from 'antd';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const NavbarWrapper = styled.section`
   display: flex;
@@ -22,8 +23,12 @@ function Header() {
       <h1>23 Untracked products in my store</h1>
       <NavbarWrapper>
         <Menu mode='horizontal'>
-          <Menu.Item key='manual'>Manual Add</Menu.Item>
-          <Menu.Item key='csv'>Add from CSV</Menu.Item>
+          <Menu.Item key='manual'>
+            <Link to='/mannual'>Manual Add</Link>
+          </Menu.Item>
+          <Menu.Item key='csv'>
+            <Link to='/csv'>Add from CSV</Link>
+          </Menu.Item>
         </Menu>
         <span>How do i get the source products ID</span>
       </NavbarWrapper>
