@@ -26,6 +26,9 @@ const JustifyRight = styled(JustifyLeft)`
 function Item(props) {
   const refID = useRef();
   const color = props.selected && '#F2F2F2';
+  const handleChangeInput = e => console.log(e.target.value);
+  const handleChangeSelect = option => console.log(option);
+
   return (
     <Wrapper id={props.id} ref={refID} style={{ backgroundColor: color }}>
       <JustifyLeft>
@@ -45,10 +48,12 @@ function Item(props) {
         <Input
           style={{ width: '20vw', marginLeft: margin }}
           placeholder='Enter Source ID'
+          onChange={handleChangeInput}
         />
         <Select
           style={{ width: '20vw', marginLeft: margin }}
           placeholder='Enter Source site'
+          onChange={handleChangeSelect}
         >
           <Option value='site_1'>Site 1</Option>
           <Option value='site_2'>Site 2</Option>
