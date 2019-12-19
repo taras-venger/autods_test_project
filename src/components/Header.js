@@ -3,6 +3,11 @@ import { Menu, Icon } from 'antd';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+const Wrapper = styled.div`
+  border-bottom: 1px solid #b7b7b7;
+  margin-bottom: 20px;
+`;
+
 const NavbarWrapper = styled.section`
   display: flex;
   align-items: center;
@@ -16,7 +21,7 @@ const IconWrapper = styled.span`
 
 function Header() {
   return (
-    <div className='Header'>
+    <Wrapper>
       <IconWrapper>
         <Icon type='close' />
       </IconWrapper>
@@ -30,9 +35,9 @@ function Header() {
             <Link to='/csv'>Add from CSV</Link>
           </Menu.Item>
         </Menu>
-        <span>How do i get the source products ID</span>
+        <Link to=''>How do i get the source products ID</Link>
       </NavbarWrapper>
-    </div>
+    </Wrapper>
   );
 }
 

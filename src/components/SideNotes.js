@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.article`
-  height: 70vh;
+  height: 65vh;
   border: 1px solid lightgrey;
+  padding: 10px;
 `;
 
 function SideNotes() {
@@ -19,7 +21,7 @@ function SideNotes() {
         <li>title</li>
         <li>price</li>
       </ul>
-      <p>Visit help section</p>
+      <Link to=''>Visit help section</Link>
     </Wrapper>
   );
 }

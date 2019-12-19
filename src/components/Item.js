@@ -10,7 +10,7 @@ const Wrapper = styled.article`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid #e5e5e5;
   padding: 5px;
 `;
 
@@ -39,7 +39,7 @@ function Item(props) {
         <Avatar
           style={{ marginRight: margin }}
           shape='square'
-          size={80}
+          size={90}
           src={props.src}
         ></Avatar>
         <ItemDescription />

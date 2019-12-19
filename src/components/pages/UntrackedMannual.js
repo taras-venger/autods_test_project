@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Item from '../Item';
-import Header from '../Header';
 import Footer from '../Footer';
 
 const dummyItems = [
@@ -35,11 +34,10 @@ function UntrackedMannual() {
   ));
 
   return (
-    <>
-      <Header />
+    <div className='UntrackedMannual'>
       {items}
       <Footer btnLable={`Add (${selectedItems.length})`} />
-    </>
+    </div>
   );
 }
 
